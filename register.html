@@ -8,23 +8,36 @@
     <meta name="renderer" content="webkit">
     <title></title>
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="plugin/bootstrap.min.css">
+    <link rel="stylesheet" href="plugin/normalize.min.css">
 
+    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/register.css">
 </head>
 <body>
 <div class="register-content">
     <div class="choice-content">
-        <span>个人预定</span>
-        <span>团体预定</span>
+        <span id="person">个人预定</span>
+        <span id="group">团体预定</span>
     </div>
-    <div class="footer">
-        下一步
-    </div>
+    <!--<div class="footer">-->
+        <!--下一步-->
+    <!--</div>-->
 </div>
 
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<script src="plugin/jquery.min.js"></script>
+<script src="plugin/bootstrap.min.js"></script>
+
+<script>
+$(function () {
+  document.getElementsByTagName('html')[0].style.fontSize = window.innerWidth / 10 + 'px';
+  $("#person").on("click",function () {
+    window.location.href='basicInfo.html'
+  });
+  $("#group").on("click",function () {
+    alert('团体预定，请拨打电话号码123456')
+  })
+})
+</script>
 </body>
 </html>

@@ -8,21 +8,80 @@
     <meta name="renderer" content="webkit">
     <title></title>
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="plugin/bootstrap.min.css">
+    <link rel="stylesheet" href="plugin/normalize.min.css">
 
+    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/basicInfo.css">
 </head>
 <body>
 <div class="basicInfo-content">
     <div class="header">请输入基本信息</div>
     <div class="toDo-content">
-        <div class="row">姓*</div>
+        <div class="one-row name">
+            <label>
+                <span class="left">姓<span class="star">*</span></span>
+                <input type="text"/>
+            </label>
+            <label class="right">
+                <span>名<span class="star">*</span></span>
+                <input type="text">
+            </label>
+        </div>
+        <div class="one-row gender">
+            <span class="left">性别<span class="star">*</span></span>
+            <label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" id="male" value="male"> 男
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" id="female" value="female"> 女
+            </label>
+        </div>
+        <div class="one-row age">
+            <span class="left">年龄<span class="star">*</span></span>
+            <select name="age">
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+            </select>
+        </div>
+        <div class="one-row card">
+            <label>
+                <span class="left">身份证或护照<span class="star">*</span></span>
+                <input class="inputW" type="text"/>
+            </label>
+        </div>
+        <div class="one-row phone">
+            <label>
+                <span class="left">手机<span class="star">*</span></span>
+                <input class="inputW" type="text"/>
+            </label>
+        </div>
+        <div class="one-row address">
+            <label>
+                <span class="left">联系地址</span>
+                <textarea class="inputW" type="text"></textarea>
+            </label>
+        </div>
+
+        <!--提示-->
+        <div class="one-row notice">
+            <span class="one"><span class="star">*</span>号为必填项</span>
+            <span>姓名必须为体检人本人</span>
+        </div>
     </div>
-    <div class="footer">下一步</div>
+    <div class="footer" id="to-country">下一步</div>
 </div>
 
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<script src="plugin/jquery.min.js"></script>
+<script src="plugin/bootstrap.min.js"></script>
+
+<script>
+  $(function () {
+    $("#to-country").on("click",function () {
+      window.location.href='country.html'
+    });
+  })
+</script>
 </body>
 </html>

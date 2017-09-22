@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <meta name="renderer" content="webkit">
+    <title></title>
+
+    <link rel="stylesheet" href="plugin/bootstrap.min.css">
+    <link rel="stylesheet" href="plugin/normalize.min.css">
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/country.css">
+</head>
+<body>
+<div class="basicInfo-content">
+    <div class="header">请输入基本信息</div>
+    <div class="toDo-content">
+        <div class="one-row">
+            <label>
+                <span class="left">国家<span class="star">*</span></span>
+                <select name="" id="">
+                    <option value="">美国</option>
+                    <option value="">英国</option>
+                    <option value="">加拿大</option>
+                    <option value="">澳洲</option>
+                    <option value="">新西兰</option>
+                    <option value="">法国</option>
+                </select>
+            </label>
+        </div>
+        <div class="one-row ime">
+            <label>
+                <span class="left">IME号</span>
+                <input class="inputW" type="text"/>
+            </label>
+        </div>
+        <div class="one-row info">
+            <span class="left pull-left">
+                <img src="img/question.png" alt="">
+            </span>
+            <span>加拿大的出国体检，如果您有IME号，必须在这里输入，否则无法顺利进行体验。</span>
+        </div>
+
+    </div>
+    <div class="footer" id="time">下一步</div>
+</div>
+
+<script src="plugin/jquery.min.js"></script>
+<script src="plugin/bootstrap.min.js"></script>
+
+<script>
+    $("#time").on("click",function () {
+      window.location.href = 'time.html'
+    })
+</script>
+</body>
+</html>

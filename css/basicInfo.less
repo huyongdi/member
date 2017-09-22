@@ -1,24 +1,76 @@
-@border:1px solid #333;
-.basicInfo-content{
-  width: 100vw;
-  height: 100vh;
-  font-family: '微软雅黑';
-  .header{
-    width: 100%;
-    text-align: center;
-    border: @border;
-    padding: 10px 0;
-  }
-  .toDo-content{
-    padding: 0 15px;
+@border: 1px solid #333;
+.basicInfo-content {
+  .toDo-content {
     margin-top: 8vh;
-  }
-  .footer{
-    width: 100%;
-    text-align: center;
-    border: @border;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
+    .one-row {
+      label {
+        font-weight: normal;
+      }
+      label.right {
+        margin-left: 10vw;
+      }
+      .star {
+        font-size: 22px;
+      }
+      .inputW{
+        width: 48vw;
+      }
+      .left {
+        display: inline-block;
+        width: 25vw;
+        text-align: right;
+        margin-right: 2vw;
+      }
+    }
+    .name {
+      input {
+        width: 15vw;
+      }
+    }
+    .gender {
+      margin-bottom: 3px;
+      .radio-inline:last-child {
+        margin-left: 5vw;
+      }
+    }
+    .age {
+      margin-bottom: 5px;
+      select{
+        width: 15vw;
+      }
+      //select{
+      //  background-color: transparent;
+      //  -webkit-appearance: none;
+      //  appearance:none;
+      //  -moz-appearance:none;
+      //  -ms-appearance:none;
+      //}
+    }
+    .address{
+      margin-top: 8px;
+      .left{
+        padding-right: 10px;
+        float: left;
+      }
+      textarea{
+        float: left;
+        margin-left: 1vw;
+        height: 15vh;
+        margin-top: 5px;
+      }
+    }
+    .notice{
+      padding-left: 27vw;
+      >span{
+       display: block;
+        .star{
+          float: left;
+        }
+      }
+      >span:first-child{
+        margin-top: 3vh;
+        margin-bottom: 1vh;
+      }
+    }
   }
 }

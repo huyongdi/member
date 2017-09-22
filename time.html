@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <meta name="renderer" content="webkit">
+    <title></title>
+
+    <link rel="stylesheet" href="plugin/bootstrap.min.css">
+    <link rel="stylesheet" href="plugin/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="plugin/normalize.min.css">
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/time.css">
+</head>
+<body>
+<div class="basicInfo-content">
+    <div class="header">请选择预约日期和时段</div>
+    <div class="toDo-content">
+        <div class="datetime-content">
+            <div class="input-group date form_datetime" data-date="1979-09-16T05:25:07Z" data-date-format="dd MM yyyy - HH:ii p"
+                 data-link-field="dtp_input1">
+                <input class="form-control" size="16" type="text" value="" readonly>
+                <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+            </div>
+            <input type="hidden" id="dtp_input1" value=""/><br/>
+        </div>
+
+        <div class="hours-content">
+            <div class="row">
+                <span class="col-xs-3">8.00-8.30</span>
+                <span class="col-xs-3">8.00-8.30</span>
+                <span class="col-xs-3">8.00-8.30</span>
+                <span class="col-xs-3">8.00-8.30</span>
+                <span class="col-xs-3">8.00-8.30</span>
+                <span class="col-xs-3">8.00-8.30</span>
+                <span class="col-xs-3">8.00-8.30</span>
+                <span class="col-xs-3">8.00-8.30</span>
+                <span class="col-xs-3">8.00-8.30</span>
+            </div>
+        </div>
+    </div>
+    <div class="footer" id="time">下一步</div>
+</div>
+
+<script src="plugin/jquery.min.js"></script>
+<script src="plugin/bootstrap.min.js"></script>
+<script src="plugin/bootstrap-datetimepicker.min.js"></script>
+
+<script type="text/javascript">
+    $(function () {
+      $('.form_datetime').datetimepicker({
+        format: 'yyyy-mm-dd',
+        startDate:  new Date().toLocaleDateString(),
+        weekStart: 0,   // 一周从哪一天开始。0（星期日）到6（星期六）
+        todayBtn: 1,
+        resetBtn: 1,//自己添加的清除按钮
+        autoclose: 1,  // 当选择一个日期之后是否立即关闭此日期时间选择器。
+        todayHighlight: true,  // 如果为true, 高亮当前日期。
+        startView: 'month',  // 日期时间选择器打开之后首先显示的视图。 0=hour,1=day,2=month,3=year,4=decade for the 10-year overview
+        minView: 'month',   // 日期时间选择器所能够提供的最精确的时间选择视图。
+        maxView: 'decade',   // 日期时间选择器最高能展示的选择范围视图。
+        forceParse: 1,  // 当选择器关闭的时候，是否强制解析输入框中的值。
+        pickerPosition: 'bottom-left'  // 显示的位置
+      });
+    });
+</script>
+</body>
+</html>
