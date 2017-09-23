@@ -1,0 +1,20 @@
+.toDo-content {
+  width: 80vw;
+  margin: 0 auto;
+}
+.toDo-content .notice {
+  margin-top: 1rem;
+}
+.toDo-content .notice > div > span {
+  display: block;
+}
+.toDo-content .cancel {
+  text-align: center;
+  margin-top: 4rem;
+}
+.toDo-content .cancel #cancel {
+  cursor: pointer;
+}
+.toDo-content .cancel .title {
+  font-size: 120%;
+}
