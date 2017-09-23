@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
     <meta name="renderer" content="webkit">
-    <title></title>
+    <title>已预约信息</title>
 
     <link rel="stylesheet" href="plugin/bootstrap.min.css">
     <link rel="stylesheet" href="plugin/bootstrap-datetimepicker.min.css">
@@ -17,7 +17,7 @@
 </head>
 <body>
 <div class="basicInfo-content">
-    <div class="header">查询结果</div>
+    <div class="header">已预约信息</div>
     <div class="toDo-content">
        <div class="info"> <!--可能需要上午下午-->
            预约号<span>XXXXXXXXX</span>,您已成功预约<span>2017年10月10日</span>，<span>14.30-15.00</span>，<span>加拿大</span>体检
@@ -45,8 +45,9 @@
         document.getElementsByTagName('html')[0].style.fontSize = window.innerWidth / 10 + 'px';
 
         $("#cancel").on("click",function () {
-            if(confirm('您确定要取消此次预约吗？')){
+            if(confirm('您确定要取消此次预约吗？取消后不可恢复！')){
                 //取消操作
+                window.location.href ='cancelSu.html'
             }
         })
 

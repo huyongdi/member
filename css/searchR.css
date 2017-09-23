@@ -10,7 +10,7 @@
 }
 .toDo-content .cancel {
   text-align: center;
-  margin-top: 4rem;
+  margin-top: 1rem;
 }
 .toDo-content .cancel #cancel {
   cursor: pointer;

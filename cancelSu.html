@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <meta name="renderer" content="webkit">
+    <title>取消预约</title>
+
+    <link rel="stylesheet" href="plugin/bootstrap.min.css">
+    <link rel="stylesheet" href="plugin/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="plugin/normalize.min.css">
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/cancelSu.css">
+</head>
+<body>
+<div class="basicInfo-content">
+    <div class="header">取消预约</div>
+    <div class="toDo-content">
+
+        <img src="img/yes.png" alt="">
+        <div class="text">预约取消成功</div>
+        <!--<div class="footer" id="exit">退出</div>-->
+    </div>
+
+    <script src="plugin/jquery.min.js"></script>
+    <script src="plugin/bootstrap.min.js"></script>
+    <script src="plugin/bootstrap-datetimepicker.min.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            document.getElementsByTagName('html')[0].style.fontSize = window.innerWidth / 10 + 'px';
+
+            $("#cancel").on("click",function () {
+                if(confirm('您确定要取消此次预约吗？取消后不可恢复！')){
+                    //取消操作
+                    window.location.href ='cancelSu.html'
+                }
+            })
+
+        });
+    </script>
+</body>
+</html>
