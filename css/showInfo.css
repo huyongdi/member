@@ -1,0 +1,38 @@
+.toDo-content {
+  width: 70vw;
+  margin: 0 auto;
+}
+.toDo-content .done-content .one {
+  margin: 0.3rem 0;
+}
+.toDo-content .done-content .one .title {
+  display: inline-block;
+  width: 20vw;
+  text-align: right;
+}
+.toDo-content .search {
+  margin-top: 1rem;
+}
+.toDo-content .search img {
+  margin-top: -3px;
+}
+.toDo-content .search span {
+  width: calc(100% - 32px);
+  display: inline-block;
+  padding-left: 0.3rem;
+}
+.toDo-content .notice {
+  margin-top: 1rem;
+}
+.toDo-content .notice img {
+  margin-left: 8px;
+  margin-right: 8px;
+}
+.toDo-content .notice > span {
+  width: calc(100% - 32px);
+  float: left;
+  padding-left: 0.3rem;
+}
+.toDo-content .notice > span .notice-one {
+  display: block;
+}

@@ -1,0 +1,27 @@
+.toDo-content .datetime-content {
+  width: 50vw;
+  margin: 2vh auto 0;
+}
+.toDo-content .hours-content {
+  width: 80vw;
+  margin-left: 12vw;
+  margin-top: 3vw;
+}
+.toDo-content .hours-content > span {
+  margin-right: 4vw;
+  display: inline-block;
+  border: 1px solid #333;
+  border-radius: 0.4rem;
+  width: 22vw;
+  text-align: center;
+  padding: 0.15rem 0;
+  margin-bottom: 0.4rem;
+  cursor: pointer;
+}
+.toDo-content .hours-content > span.disabled {
+  cursor: not-allowed;
+  background-color: #eee;
+}
+.toDo-content .hours-content > span.active {
+  border: 1px solid red;
+}

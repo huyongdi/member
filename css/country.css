@@ -1,0 +1,32 @@
+.toDo-content .one-row label {
+  font-weight: normal;
+}
+.toDo-content .one-row label.right {
+  margin-left: 10vw;
+}
+.toDo-content .one-row .star {
+  font-size: 22px;
+}
+.toDo-content .one-row .inputW {
+  width: 48vw;
+}
+.toDo-content .one-row .left {
+  display: inline-block;
+  width: 30vw;
+  text-align: right;
+  padding-right: 2vw;
+}
+.toDo-content .one-row select {
+  width: 48vw;
+}
+.toDo-content .one-row:first-child {
+  margin-bottom: 5vh;
+}
+.toDo-content .ime .left {
+  padding-right: 2vw;
+}
+.toDo-content .info > span:last-child {
+  display: inline-block;
+  width: 48vw;
+  float: left;
+}
