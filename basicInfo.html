@@ -15,8 +15,7 @@
     <link rel="stylesheet" href="css/basicInfo.css">
 </head>
 <body>
-<div class="basicInfo-content">
-    <div class="header">请输入基本信息</div>
+    <div class="header"><span>请输入基本信息</span></div>
     <div class="toDo-content">
         <div class="one-row name">
             <label>
@@ -70,15 +69,15 @@
             <span>姓名必须为体检人本人</span>
         </div>
     </div>
-    <div class="footer" id="to-country">下一步</div>
-</div>
+    <div class="footer" id="to-country"><span>下一步</span></div>
 
 <script src="plugin/jquery.min.js"></script>
 <script src="plugin/bootstrap.min.js"></script>
 
 <script>
   $(function () {
-    $("#to-country").on("click",function () {
+      document.getElementsByTagName('html')[0].style.fontSize = window.innerWidth / 10 + 'px';
+      $("#to-country").on("click",function () {
       window.location.href='country.html'
     });
   })

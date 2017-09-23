@@ -1,62 +1,59 @@
-.basicInfo-content .toDo-content {
-  margin-top: 8vh;
-}
-.basicInfo-content .toDo-content .one-row label {
+.toDo-content .one-row label {
   font-weight: normal;
 }
-.basicInfo-content .toDo-content .one-row label.right {
+.toDo-content .one-row label.right {
   margin-left: 10vw;
 }
-.basicInfo-content .toDo-content .one-row .star {
+.toDo-content .one-row .star {
   font-size: 22px;
 }
-.basicInfo-content .toDo-content .one-row .inputW {
+.toDo-content .one-row .inputW {
   width: 48vw;
 }
-.basicInfo-content .toDo-content .one-row .left {
+.toDo-content .one-row .left {
   display: inline-block;
-  width: 25vw;
+  width: 30vw;
   text-align: right;
-  margin-right: 2vw;
+  padding-right: 2vw;
 }
-.basicInfo-content .toDo-content .name input {
+.toDo-content .name input {
   width: 15vw;
 }
-.basicInfo-content .toDo-content .gender {
+.toDo-content .gender {
   margin-bottom: 3px;
 }
-.basicInfo-content .toDo-content .gender .radio-inline:last-child {
+.toDo-content .gender .radio-inline:last-child {
   margin-left: 5vw;
 }
-.basicInfo-content .toDo-content .age {
+.toDo-content .age {
   margin-bottom: 5px;
 }
-.basicInfo-content .toDo-content .age select {
+.toDo-content .age select {
   width: 15vw;
 }
-.basicInfo-content .toDo-content .address {
+.toDo-content .address {
   margin-top: 8px;
 }
-.basicInfo-content .toDo-content .address .left {
+.toDo-content .address .left {
   padding-right: 10px;
   float: left;
 }
-.basicInfo-content .toDo-content .address textarea {
+.toDo-content .address textarea {
   float: left;
   margin-left: 1vw;
   height: 15vh;
   margin-top: 5px;
 }
-.basicInfo-content .toDo-content .notice {
+.toDo-content .notice {
   padding-left: 27vw;
 }
-.basicInfo-content .toDo-content .notice > span {
+.toDo-content .notice > span {
   display: block;
 }
-.basicInfo-content .toDo-content .notice > span .star {
+.toDo-content .notice > span .star {
   float: left;
 }
-.basicInfo-content .toDo-content .notice > span:first-child {
+.toDo-content .notice > span:first-child {
   margin-top: 3vh;
   margin-bottom: 1vh;
 }

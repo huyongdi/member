@@ -1,9 +1,9 @@
-.register-content .choice-content {
-  margin-top: 20vh;
+.register-content {
+  padding-top: 20vh;
 }
 .register-content .choice-content > span {
   display: block;
-  padding: 10px 20px;
+  padding: 0.4rem 0.5rem;
   border: 1px solid #333;
   width: 30vw;
   margin: 0 auto;
@@ -11,12 +11,4 @@
 }
 .register-content .choice-content > span:first-child {
   margin-bottom: 7vh;
-}
-.register-content .footer {
-  width: 100%;
-  text-align: center;
-  border: 1px solid #333;
-  padding: 10px 0;
-  position: fixed;
-  bottom: 0;
 }

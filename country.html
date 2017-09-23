@@ -16,7 +16,7 @@
 </head>
 <body>
 <div class="basicInfo-content">
-    <div class="header">请输入基本信息</div>
+    <div class="header"><span>请输入基本信息</span></div>
     <div class="toDo-content">
         <div class="one-row">
             <label>
@@ -45,16 +45,20 @@
         </div>
 
     </div>
-    <div class="footer" id="time">下一步</div>
+    <div class="footer" id="time"><span>下一步</span></div>
 </div>
 
 <script src="plugin/jquery.min.js"></script>
 <script src="plugin/bootstrap.min.js"></script>
 
 <script>
-    $("#time").on("click",function () {
-      window.location.href = 'time.html'
+    $(function () {
+        document.getElementsByTagName('html')[0].style.fontSize = window.innerWidth / 10 + 'px';
+        $("#time").on("click",function () {
+            window.location.href = 'time.html'
+        })
     })
+
 </script>
 </body>
 </html>

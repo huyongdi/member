@@ -51,6 +51,7 @@
 
 <script type="text/javascript">
     $(function () {
+        document.getElementsByTagName('html')[0].style.fontSize = window.innerWidth / 10 + 'px';
       $('.form_datetime').datetimepicker({
         format: 'yyyy-mm-dd',
         startDate:  new Date().toLocaleDateString(),

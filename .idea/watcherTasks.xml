@@ -20,7 +20,7 @@
         </array>
       </option>
       <option name="outputFromStdout" value="true" />
-      <option name="program" value="D:/QQ/354224080/FileRecv/less 编辑器插件包/less/lessc.cmd" />
+      <option name="program" value="C:/SSD/office/less 编辑器插件包/less/lessc.cmd" />
       <option name="scopeName" value="Project Files" />
       <option name="trackOnlyRoot" value="false" />
       <option name="workingDir" value="$FileDir$" />
