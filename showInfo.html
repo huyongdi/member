@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <meta name="renderer" content="webkit">
+    <title></title>
+
+    <link rel="stylesheet" href="plugin/bootstrap.min.css">
+    <link rel="stylesheet" href="plugin/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="plugin/normalize.min.css">
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/showInfo.css">
+</head>
+<body>
+<div class="basicInfo-content">
+    <div class="header">预约成功</div>
+    <div class="toDo-content">
+        <div class="done-content">
+            <div class="one">
+                <span class="title">预约号：</span>
+                <span class="content">ABCDE</span>
+            </div>
+            <div class="one">
+                <span class="title">预约日期：</span>
+                <span class="content">2017年10月10号</span>
+            </div>
+            <div class="one">
+                <span class="title">预约时段：</span>
+                <span class="content">14.30-15：00</span>
+            </div>
+        </div>
+        <div class="search">
+                <img class="pull-left" src="img/light.png" alt="">
+                <span>您可以通过预约号或身份证、护照号码，查询您的预约。</span>
+        </div>
+        <div class="notice">
+                <img class="pull-left" src="img/point.png" alt="">
+                <span>
+                    <span>加拿大</span>体检注意事项如下：
+                    <span class="notice-one">XXXXXX</span>
+                    <span class="notice-one">XXX</span>
+                </span>
+
+        </div>
+    </div>
+    <div class="footer" id="exit">退出</div>
+</div>
+
+<script src="plugin/jquery.min.js"></script>
+<script src="plugin/bootstrap.min.js"></script>
+<script src="plugin/bootstrap-datetimepicker.min.js"></script>
+
+<script type="text/javascript">
+    $(function () {
+        document.getElementsByTagName('html')[0].style.fontSize = window.innerWidth / 10 + 'px';
+        $("#exit").on("click",function () {
+
+        })
+    });
+</script>
+</body>
+</html>

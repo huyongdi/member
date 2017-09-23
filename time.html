@@ -28,21 +28,34 @@
             <input type="hidden" id="dtp_input1" value=""/><br/>
         </div>
 
-        <div class="hours-content">
-            <div class="row">
-                <span class="col-xs-3">8.00-8.30</span>
-                <span class="col-xs-3">8.00-8.30</span>
-                <span class="col-xs-3">8.00-8.30</span>
-                <span class="col-xs-3">8.00-8.30</span>
-                <span class="col-xs-3">8.00-8.30</span>
-                <span class="col-xs-3">8.00-8.30</span>
-                <span class="col-xs-3">8.00-8.30</span>
-                <span class="col-xs-3">8.00-8.30</span>
-                <span class="col-xs-3">8.00-8.30</span>
-            </div>
+        <div class="hours-content"> <!--测试12个小时，8行，每行3个,disabled为不能点的样式,active为选中样式-->
+            <span>8.00-8.30</span>
+            <span class="disabled">8.00-8.30</span>
+            <span>8.00-8.30</span>
+            <span>8.00-8.30</span>
+            <span>8.00-8.30</span>
+            <span>8.00-8.30</span>
+            <span>8.00-8.30</span>
+            <span>8.00-8.30</span>
+            <span>8.00-8.30</span>
+            <span>8.00-8.30</span>
+            <span>8.00-8.30</span>
+            <span>8.00-8.30</span>
+            <span>8.00-8.30</span>
+            <span>8.00-8.30</span>
+            <span>8.00-8.30</span>
+            <span>8.00-8.30</span>
+            <span>8.00-8.30</span>
+            <span>8.00-8.30</span>
+            <span>8.00-8.30</span>
+            <span>8.00-8.30</span>
+            <span>8.00-8.30</span>
+            <span>8.00-8.30</span>
+            <span>8.00-8.30</span>
+            <span>8.00-8.30</span>
         </div>
     </div>
-    <div class="footer" id="time">下一步</div>
+    <div class="footer" id="toShow">下一步</div>
 </div>
 
 <script src="plugin/jquery.min.js"></script>
@@ -52,7 +65,7 @@
 <script type="text/javascript">
     $(function () {
         document.getElementsByTagName('html')[0].style.fontSize = window.innerWidth / 10 + 'px';
-      $('.form_datetime').datetimepicker({
+        $('.form_datetime').datetimepicker({
         format: 'yyyy-mm-dd',
         startDate:  new Date().toLocaleDateString(),
         weekStart: 0,   // 一周从哪一天开始。0（星期日）到6（星期六）
@@ -66,6 +79,14 @@
         forceParse: 1,  // 当选择器关闭的时候，是否强制解析输入框中的值。
         pickerPosition: 'bottom-left'  // 显示的位置
       });
+        /*点击span选择时段*/
+        $(".hours-content").find('>span:not(.disabled)').on('click',function () {
+            $(".hours-content").find('.active').removeClass('active');
+            $(this).addClass('active')
+        });
+        $("#toShow").on("click",function () {
+            window.location.href='showInfo.html'
+        })
     });
 </script>
 </body>

@@ -20,14 +20,14 @@
         <div class="one-row name">
             <label>
                 <span class="left">姓<span class="star">*</span></span>
-                <input type="text"/>
+                <input id="surname" type="text"/>
             </label>
             <label class="right">
                 <span>名<span class="star">*</span></span>
-                <input type="text">
+                <input id="name" type="text">
             </label>
         </div>
-        <div class="one-row gender">
+        <div class="one-row gender" id="gender">
             <span class="left">性别<span class="star">*</span></span>
             <label class="radio-inline">
                 <input type="radio" name="inlineRadioOptions" id="male" value="male"> 男
@@ -38,7 +38,7 @@
         </div>
         <div class="one-row age">
             <span class="left">年龄<span class="star">*</span></span>
-            <select name="age">
+            <select name="age" id="age">
                 <option value="18">18</option>
                 <option value="19">19</option>
                 <option value="20">20</option>
@@ -47,19 +47,19 @@
         <div class="one-row card">
             <label>
                 <span class="left">身份证或护照<span class="star">*</span></span>
-                <input class="inputW" type="text"/>
+                <input id="card" class="inputW" type="text"/>
             </label>
         </div>
         <div class="one-row phone">
             <label>
                 <span class="left">手机<span class="star">*</span></span>
-                <input class="inputW" type="text"/>
+                <input id="phone" class="inputW" type="text"/>
             </label>
         </div>
         <div class="one-row address">
             <label>
                 <span class="left">联系地址</span>
-                <textarea class="inputW" type="text"></textarea>
+                <textarea id="address" class="inputW" type="text"></textarea>
             </label>
         </div>
 
@@ -78,7 +78,49 @@
   $(function () {
       document.getElementsByTagName('html')[0].style.fontSize = window.innerWidth / 10 + 'px';
       $("#to-country").on("click",function () {
-      window.location.href='country.html'
+          var surname = $.trim($("#surname").val());
+          var name = $.trim($("#name").val());
+          var gender = '';
+          var age = $("#age").val();
+          var card = $.trim($("#card").val());
+          var phone = $.trim($("#phone").val());
+          var address = $.trim($("#address").val());
+          var isIdCard = 0;//是不是身份证
+
+          if(!surname || !name){
+              alert('请填写姓名');
+              return;
+          }
+          if($("#male").get(0).checked){
+              gender = '男'
+          }else if($("#female").get(0).checked){
+              gender = '女'
+          }
+          if(!gender){
+              alert('请勾选性别');
+              return;
+          }
+          if(!age){
+              alert('请选择年龄');
+              return;
+          }
+          if(!card){
+              alert("请输入身份证号或护照");
+              return;
+          }else if(/^(^[1-9]\d{7}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}$)|(^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])((\d{4})|\d{3}[Xx])$)$/.test(card)){
+                  isIdCard =1
+          }
+          if(!/^(0|86|17951)?(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}$/.test(phone)){
+              alert('请输入正确的手机号');
+              return;
+          }
+          var cardStr = isIdCard?',身份证':',护照';
+          var confirmStr = '请确认信息：姓名:'+surname+name+',性别:'+gender+',年龄:'+age+cardStr+':'+card+',手机号:'+phone;
+          confirmStr = address?confirmStr+',地址:'+address:confirmStr;
+
+          if(confirm(confirmStr)){
+              window.location.href='country.html'
+          }
     });
   })
 </script>
